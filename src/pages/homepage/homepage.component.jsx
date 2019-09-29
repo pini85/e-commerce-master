@@ -8,7 +8,6 @@ import "./homepage.styles.scss";
 
 class Homepage extends React.Component {
   render() {
-    console.log(this.props);
     return (
       <div>
         {this.props.modalState.modal ? (

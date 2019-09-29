@@ -2,28 +2,20 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { selectCartItems } from "../../redux/cart/cart.selectors";
 import { selectCartItemsTotal } from "../../redux/cart/cart.selectors";
-import Select from "../../components/select/select.components";
+import ArrowQuantity from "../../components/arrow-quantity/arrow-quantity.components";
 import { removeItemFromCart } from "../../redux/cart/cart.action";
 
 class Checkout extends Component {
-  handleChange(e, item) {
-    console.log(item);
-    console.log(e.target.value);
-    //take the value and add it to the dispatch of the selected item
-  }
   render() {
-    console.log(this.props);
     return (
       <div>
         {this.props.items.map(item => {
           return (
             <>
-              <Select
+              <ArrowQuantity
                 quantity={item.quantity}
-                handleChange={e => {
-                  this.handleChange(e, item);
-                }}
-              ></Select>
+                item={item}
+              ></ArrowQuantity>
 
               <div>name:{item.name}</div>
               <div>price:{item.price}</div>

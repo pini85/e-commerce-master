@@ -13,12 +13,24 @@ export const addItemToCart = (cartItems, cartItemToAdd) => {
   return [...cartItems, { ...cartItemToAdd, quantity: 1 }];
 };
 
-// export const removeItem = (cartItems, cartItemToRemove) => {
-//   const item = cartItems.find(cartItem => {
-//     return cartItem.id === cartItemToRemove.id;
-//   });
-//   if (item) {
-//   }
-// };
+export const removeItem = (cartItems, cartItemToRemove) => {
+  const existingCartItem = cartItems.find(cartItem => {
+    return cartItem.id === cartItemToRemove.id;
+  });
+
+  if (existingCartItem) {
+    console.log(existingCartItem.quantity);
+    if (cartItemToRemove.quantity === 1) {
+      return cartItems.filter(cartItem => {
+        return cartItem.id !== cartItemToRemove.id;
+      });
+    }
+    return cartItems.map(cartItem =>
+      cartItem.id === cartItemToRemove.id
+        ? { ...cartItem, quantity: cartItem.quantity - 1 }
+        : cartItem
+    );
+  }
+};
 
 export const addQuantity = (cartItems, cartItemQuantityToAdd) => {};

@@ -9,7 +9,6 @@ import {
   signInWithTwitter,
   signInWithGithub
 } from "../../firebase/firebase.utils";
-import Facebook from "../facebook/facebook.component";
 
 class SignIn extends React.Component {
   constructor(props) {

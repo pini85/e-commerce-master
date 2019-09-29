@@ -8,16 +8,6 @@ import { toggleCartHidden } from "../../redux/cart/cart.action";
 import { withRouter } from "react-router-dom";
 
 class CartDropDown extends React.Component {
-  state = {
-    empty: true
-  };
-  componentDidMount() {
-    if (this.props.cartItems.length > 0) {
-      console.log("setting to true");
-      this.setState({ empty: false });
-    }
-  }
-
   render() {
     return (
       <div className="cart-dropdown">
@@ -39,7 +29,6 @@ class CartDropDown extends React.Component {
               this.props.history.push("/checkout");
               this.props.hideCart();
             }}
-            isEmpty={this.state.empty}
           >
             Proceed to checkout
           </CustomButton>
