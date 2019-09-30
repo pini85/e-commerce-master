@@ -1,8 +1,8 @@
 .cart-item {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 
-  padding: 1rem;
+  padding: 1rem 0;
   &::before {
     content: "";
     position: absolute;
@@ -16,14 +16,16 @@
   &__img {
     height: 6rem;
     width: 6rem;
-    margin-right: 2rem;
   }
   &__name {
     font-size: 1.5rem;
   }
 
   &__price {
+    display: flex;
+    justify-content: flex-start;
   }
   &__details {
+    margin: 0 2rem;
   }
 }

@@ -1,0 +1,36 @@
+.checkout-item {
+  &__container {
+    display: grid;
+    width: 100vw;
+    grid-template-rows: repeat(2, max-content);
+    grid-template-columns: repeat(3, max-content);
+  }
+
+  &__image {
+    grid-row: 1/-1;
+    grid-column: 1/2;
+    margin: 0 4rem;
+  }
+
+  &__title {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    font-size: 2rem;
+    margin-right: 13rem;
+  }
+
+  &__price {
+    font-size: 2rem;
+    grid-row: 1/2;
+    grid-column: 3/3;
+  }
+
+  &__quantity {
+    &-title {
+      margin-left: 7px;
+    }
+  }
+
+  &__remove {
+  }
+}

@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   position: absolute;
-  padding: 2rem 1rem 1rem 1rem;
+  padding: 2rem;
   background-color: var(--color-background-light);
   border: 2px solid var(--color-primary);
   height: 350px;
@@ -19,7 +19,7 @@
 }
 
 .cart-dropdown-button {
-  margin-bottom: 2rem;
+  margin-top: 2rem;
   margin-top: auto;
 }
 

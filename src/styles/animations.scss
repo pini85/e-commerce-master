@@ -15,12 +15,9 @@
     transform: rotate(27deg) translate(0px);
   }
 
-  50% {
-    transform: translate(-5.5px, 27.5px);
-  }
   100% {
     color: var(--color-primary);
-    transform: rotate(0deg) translate(-11px, 73px);
+    transform: rotate(0deg) translate(-20px, 73px);
   }
 }
 
