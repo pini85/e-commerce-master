@@ -1,0 +1,16 @@
+.checkout-container {
+  margin: 5rem 0;
+}
+
+.sub-total {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  width: 50rem;
+  margin: 0 auto;
+
+  & span {
+    color: red;
+    margin-left: 2px;
+  }
+}

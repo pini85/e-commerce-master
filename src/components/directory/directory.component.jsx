@@ -2,6 +2,7 @@ import React from "react";
 import "./directory.styles.scss";
 import MenuItem from "../menu-item/menu-item.component";
 import { connect } from "react-redux";
+import { selectDirectorySection } from "../../redux/directory/directory.selectors";
 
 const Directory = ({ sections }) => {
   return (
@@ -14,7 +15,7 @@ const Directory = ({ sections }) => {
 };
 
 const mapStateToProps = state => ({
-  sections: state.directory.sections
+  sections: selectDirectorySection(state)
 });
 
 export default connect(mapStateToProps)(Directory);

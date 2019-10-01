@@ -23,16 +23,18 @@ class CartDropDown extends React.Component {
             </div>
           )}
         </div>
-        <div className="cart-dropdown-button">
-          <CustomButton
-            onClick={() => {
-              this.props.history.push("/checkout");
-              this.props.hideCart();
-            }}
-          >
-            Proceed to checkout
-          </CustomButton>
-        </div>
+        {this.props.cartItems.length ? (
+          <div className="cart-dropdown-button">
+            <CustomButton
+              onClick={() => {
+                this.props.history.push("/checkout");
+                this.props.hideCart();
+              }}
+            >
+              Proceed to checkout
+            </CustomButton>
+          </div>
+        ) : null}
       </div>
     );
   }

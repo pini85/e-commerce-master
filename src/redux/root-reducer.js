@@ -5,14 +5,16 @@ import userReducer from "./user/user.reducer";
 import modalReducer from "./modal/modal.reducer";
 import cartReducer from "./cart/cart.reducer";
 import directoryReducer from "./directory/directory.reducer";
+import shopReducer from "./shop/shop.reducer";
 
 const persistConfig = {
   key: "root",
   storage,
-  whitelist: ["cart", "modal", "directory"]
+  whitelist: ["cart"]
 };
 
 const rootReducer = combineReducers({
+  shop: shopReducer,
   user: userReducer,
   modal: modalReducer,
   cart: cartReducer,
