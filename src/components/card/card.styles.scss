@@ -49,6 +49,7 @@
       opacity: 1 !important;
       font-size: 1.7rem;
       font-weight: 900;
+      cursor: pointer;
     }
   }
 
@@ -130,4 +131,13 @@
     font-size: 0.8rem;
     color: gold;
   }
+}
+.no-link {
+  cursor: auto;
+}
+//styles for card category
+.card-category {
+  cursor: pointer;
+  width: 30%;
+  padding: 0 11px;
 }

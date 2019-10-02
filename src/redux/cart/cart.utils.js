@@ -32,5 +32,3 @@ export const removeItem = (cartItems, cartItemToRemove) => {
     );
   }
 };
-
-export const addQuantity = (cartItems, cartItemQuantityToAdd) => {};

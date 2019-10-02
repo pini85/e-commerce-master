@@ -16,15 +16,12 @@ const Header = ({ currentUser, hidden }) => (
     </Link>
     <div className="header__options">
       <div className="header__option">
-        <Link className="header__option-text" to="/shop"></Link>
-      </div>
-      <div className="header__option">
         <Link className="header__option-text" to="/shop">
           Shop
         </Link>
       </div>
       <div className="header__option">
-        <Link className="header__option-text" to="/shop">
+        <Link className="header__option-text" to="/categories">
           Categories
         </Link>
       </div>

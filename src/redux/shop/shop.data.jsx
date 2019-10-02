@@ -94,6 +94,7 @@ const SHOP_DATA = [
       }
     ]
   },
+
   {
     id: 2,
     title: "Sneakers",
@@ -106,7 +107,8 @@ const SHOP_DATA = [
         salePercentage: 10,
         exclusive: false,
         name: "Adidas NMD",
-        imageUrl: "https://i.ibb.co/0s3pdnc/adidas-nmd.png",
+        imageUrl:
+          " https://i.ibb.co/Mp9cLKJ/kisspng-sneakers-skate-shoe-nike-air-max-running-runn-5b494b238a94c7-6551943515315300195677-1.png",
         price: 220
       },
       {
@@ -116,7 +118,8 @@ const SHOP_DATA = [
         salePercentage: "",
         exclusive: true,
         name: "Adidas Yeezy",
-        imageUrl: "https://i.ibb.co/dJbG1cT/yeezy.png",
+        imageUrl:
+          "https://i.ibb.co/zPdt478/kisspng-skate-shoe-sneakers-basketball-shoe-hiking-boot-bagheera-5b217f4b3e7325-6008825515289219312558.png",
         price: 280
       },
       {
@@ -126,7 +129,8 @@ const SHOP_DATA = [
         salePercentage: 30,
         exclusive: false,
         name: "Black Converse",
-        imageUrl: "https://i.ibb.co/bPmVXyP/black-converse.png",
+        imageUrl:
+          "https://i.ibb.co/DwhR3Q1/kisspng-skate-shoe-sneakers-vans-water-shoe-bla-bla-5b3536bd54e487-9038199015302140773477.png",
         price: 110
       },
       {
@@ -136,7 +140,8 @@ const SHOP_DATA = [
         salePercentage: "",
         exclusive: false,
         name: "Nike White AirForce",
-        imageUrl: "https://i.ibb.co/1RcFPk0/white-nike-high-tops.png",
+        imageUrl:
+          "https://i.ibb.co/Mp9cLKJ/kisspng-sneakers-skate-shoe-nike-air-max-running-runn-5b494b238a94c7-6551943515315300195677-1.png",
         price: 160
       },
       {
@@ -146,7 +151,8 @@ const SHOP_DATA = [
         salePercentage: "",
         exclusive: true,
         name: "Nike Red High Tops",
-        imageUrl: "https://i.ibb.co/QcvzydB/nikes-red.png",
+        imageUrl:
+          "https://i.ibb.co/qnNHStz/kisspng-veja-sneakers-organic-cotton-shoe-leather-5be69313243550-1224510015418375871483.png",
         price: 160
       },
       {
@@ -156,7 +162,8 @@ const SHOP_DATA = [
         salePercentage: 5,
         exclusive: false,
         name: "Nike Brown High Tops",
-        imageUrl: "https://i.ibb.co/fMTV342/nike-brown.png",
+        imageUrl:
+          "https://i.ibb.co/FKZCpmp/kisspng-sneakers-skate-shoe-clothing-footwear-keela-a-custom-shoe-concept-by-caroline-ngamotu-5b6e3a483d02e6-8136092615339505362499.png",
         price: 160
       },
       {
@@ -166,7 +173,8 @@ const SHOP_DATA = [
         salePercentage: 80,
         exclusive: false,
         name: "Air Jordan Limited",
-        imageUrl: "https://i.ibb.co/w4k6Ws9/nike-funky.png",
+        imageUrl:
+          "https://i.ibb.co/m4P1kYr/kisspng-sneakers-boot-shoe-footwear-high-top-5be1e13207be55-8579860915415299060317.png",
         price: 190
       },
       {
@@ -176,8 +184,31 @@ const SHOP_DATA = [
         salePercentage: "",
         exclusive: false,
         name: "Timberlands",
-        imageUrl: "https://i.ibb.co/Mhh6wBg/timberlands.png",
+        imageUrl:
+          "https://i.ibb.co/JptGmXL/kisspng-sneakers-diesel-skate-shoe-jeans-denim-shoes-5b381752b3b7b1-3314829415304026427361.png",
         price: 200
+      },
+      {
+        id: 18,
+        index: 8,
+        sale: false,
+        salePercentage: "",
+        exclusive: false,
+        name: "Huskey sneakers",
+        imageUrl:
+          "https://i.ibb.co/DG3HBvv/kisspng-sneakers-shoe-walking-replay-5b2c87b38fdd81-0664052815296449795893.png",
+        price: 300
+      },
+      {
+        id: 19,
+        index: 9,
+        sale: false,
+        salePercentage: "",
+        exclusive: false,
+        name: "Pini wonderland",
+        imageUrl:
+          "https://i.ibb.co/DgtRDx1/kisspng-sneakers-skate-shoe-discounts-and-allowances-onlin-red-sugar-beet-5b4c5ff3326df6-5039800615317319552066.png",
+        price: 50
       }
     ]
   },
