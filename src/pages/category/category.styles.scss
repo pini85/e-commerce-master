@@ -1,6 +1,15 @@
 .category-item__container {
   position: relative;
-  display: flex;
-  justify-content: center;
   margin-top: 10rem;
+  text-align: center;
+}
+
+.category-card {
+  width: 30%;
+  padding: 3rem 5%;
+}
+
+.category-card-layer {
+  height: 78%;
+  width: 67%;
 }

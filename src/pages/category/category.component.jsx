@@ -4,7 +4,6 @@ import "./category.styles.scss";
 import { selectCategory } from "../../redux/shop/shop.selectors";
 import Card from "../../components/card/card.component";
 const CategoryPage = ({ categories, match }) => {
-  console.log(match);
   return (
     <div className="category-item__container">
       <div className="hidden"></div>
@@ -12,7 +11,13 @@ const CategoryPage = ({ categories, match }) => {
         return array.map(item => {
           return (
             <>
-              <Card item={item} isCategory={true} />
+              <Card
+                styleCard={"category-card"}
+                styleLayer={"category-card-layer"}
+                item={item}
+                isCategory={true}
+                key={item.id}
+              />
             </>
           );
         });

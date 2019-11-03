@@ -2,20 +2,17 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 import "./menu-item.styles.scss";
 const MenuItem = ({ title, id, history, linkUrl, match }) => {
-  console.log("history, linkUrl, match: ", linkUrl);
-
   return (
     <div
       className={`menu-item menu-item-` + id}
-      onClick={() => history.push(`${match.url}${linkUrl}`)}
+      onClick={() => history.push(`${match.url}shop/${linkUrl}`)}
     >
       <div
         className={`menu-item__background menu-item__background-` + id}
       ></div>
       <div className={`menu-item__content menu-item__content-` + id}>
         <h2 className={` heading-secondary menu-item__content-title-` + id}>
-          {" "}
-          {title.toUpperCase()}{" "}
+          {title.toUpperCase()}
         </h2>
         <span className="menu-item__content-title">SHOP NOW!</span>
       </div>
