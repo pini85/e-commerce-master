@@ -6,6 +6,7 @@ import CheckoutItem from "../../components/checkout-item/checkout-item.component
 import { selectCartItemsCount } from "../../redux/cart/cart.selectors";
 import { selectCartItemsTotal } from "../../redux/cart/cart.selectors";
 import { removeItemFromCart } from "../../redux/cart/cart.action";
+import StripeButton from "../../components/stripe-button/strip-button.component";
 
 const Checkout = ({ total, quantity }) => {
   return (
@@ -15,6 +16,13 @@ const Checkout = ({ total, quantity }) => {
         {`Subtotal (${quantity} ${quantity > 1 ? "items" : "item"}):`}
         <span>${total}</span>
       </div>
+      <div className="test-warning">
+        *Please use the following test credit card for payments*
+        <br />
+        4242 4242 4242 4242 -Exp: 01/20 - CVV: 123
+      </div>
+
+      <StripeButton price={total} />
     </div>
   );
 };

@@ -1,5 +1,6 @@
 .checkout-container {
   margin: 5rem 0;
+  text-align: center;
 }
 
 .sub-total {
@@ -13,4 +14,14 @@
     color: red;
     margin-left: 2px;
   }
+}
+
+.test-warning {
+  margin: 3rem 0;
+  color: darkred;
+  font-size: 1.5rem;
+}
+
+button {
+  margin-left: auto;
 }

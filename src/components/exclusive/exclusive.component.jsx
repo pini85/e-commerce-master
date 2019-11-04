@@ -6,15 +6,13 @@ import "./exclusive.styles.scss";
 const exclusive = ({ exclusive }) => {
   return (
     <>
-      <h2 className="heading-secondary">Sale</h2>
-      {exclusive.map(items => {
-        return items.map(item => {
-          return (
-            <>
-              <Card item={item} styleCard={"collection-card"} />
-            </>
-          );
-        });
+      <h2 className="heading-secondary">exclusive</h2>
+      {exclusive.map(item => {
+        return (
+          <>
+            <Card item={item} styleCard={"collection-card"} />
+          </>
+        );
       })}
     </>
   );

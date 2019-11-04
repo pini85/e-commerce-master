@@ -4,17 +4,17 @@ import Card from "../card/card.component";
 import { selectSaleCollection } from "../../redux/shop/shop.selectors";
 import "./sale.styles.scss";
 const sale = ({ sale }) => {
+  console.log(sale);
+
   return (
     <>
       <h2 className="heading-secondary">Sale</h2>
-      {sale.map(items => {
-        return items.map(item => {
-          return (
-            <>
-              <Card item={item} styleCard={"collection-card"} />
-            </>
-          );
-        });
+      {sale.map(item => {
+        return (
+          <>
+            <Card item={item} styleCard={"collection-card"} />
+          </>
+        );
       })}
     </>
   );

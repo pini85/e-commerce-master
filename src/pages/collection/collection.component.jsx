@@ -13,6 +13,7 @@ class CollectionPage extends React.Component {
   }
   render() {
     const { collection } = this.props;
+    console.log(collection);
 
     return (
       <div>
