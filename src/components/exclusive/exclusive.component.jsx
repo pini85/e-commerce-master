@@ -7,12 +7,14 @@ const exclusive = ({ exclusive }) => {
   return (
     <>
       <h2 className="heading-secondary">exclusive</h2>
-      {exclusive.map(item => {
-        return (
-          <>
-            <Card item={item} styleCard={"collection-card"} />
-          </>
-        );
+      {exclusive.map(items => {
+        return items.map(item => {
+          return (
+            <>
+              <Card item={item} styleCard={"collection-card"} />
+            </>
+          );
+        });
       })}
     </>
   );

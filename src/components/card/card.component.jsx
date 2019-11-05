@@ -5,6 +5,8 @@ import { addItem } from "../../redux/cart/cart.action";
 import "./card.styles.scss";
 
 const Card = ({ item, addItem, isCategory, styleCard, styleLayer }) => {
+  console.log(item);
+
   const exclusive = () => {
     if (item.exclusive === true) {
       return (
