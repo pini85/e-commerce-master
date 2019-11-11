@@ -1,7 +1,4 @@
 .custom-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
   font-size: 1.3rem;
   color: white;
@@ -45,7 +42,11 @@
     // font-weight: 900;
   }
 }
-
+.social-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .google-sign-in {
   width: 25rem;
   background-color: #2a75f4;

@@ -22,13 +22,13 @@ const CustomButton = ({
     isGithubSignIn
   ) => {
     if (isGoogleSignIn) {
-      return "google-sign-in";
+      return "google-sign-in social-btn";
     } else if (isFaceBookSignIn) {
-      return "facebook-sign-in";
+      return "facebook-sign-in social-btn";
     } else if (isTwitterSignIn) {
-      return "twitter-sign-in";
+      return "twitter-sign-in social-btn";
     } else if (isGithubSignIn) {
-      return "github-sign-in";
+      return "github-sign-in social-btn";
     } else {
       return "";
     }
@@ -42,27 +42,27 @@ const CustomButton = ({
   ) => {
     if (isGoogleSignIn) {
       return (
-        <div>
-          <img src={google} className="icon" alt="" />
-        </div>
+        <span>
+          <img src={google} className="icon " alt="" />
+        </span>
       );
     } else if (isFaceBookSignIn) {
       return (
-        <div>
+        <span>
           <img src={facebook} className="icon facebook" alt="" />
-        </div>
+        </span>
       );
     } else if (isTwitterSignIn) {
       return (
-        <div>
+        <span>
           <img src={twitter} className="icon facebook" alt="" />
-        </div>
+        </span>
       );
     } else if (isGithubSignIn) {
       return (
-        <div>
+        <span>
           <img src={github} className="icon facebook" alt="" />
-        </div>
+        </span>
       );
     } else {
       return "";

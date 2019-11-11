@@ -1,6 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import {
+  HeaderContainer,
+  LogoContainer,
+  LogoStyles,
+  OptionContainer,
+  Option,
+  OptionText,
+  CartStyles
+} from "./header.styles";
 import "../../components/header/header.styles.scss";
 import Cart from "../cart/cart.component";
 import CartDropDown from "../cart-dropdown/cart-dropdown.component";
@@ -10,43 +19,35 @@ import { selectCurrentUser } from "../../redux/user/user.selectors";
 import { selectCartHidden } from "../../redux/cart/cart.selectors";
 
 const Header = ({ currentUser, hidden }) => (
-  <div className="header">
-    <Link to="/" className="header__logo-wrapper">
-      <Logo title="logo" className="header__logo"></Logo>
-    </Link>
-    <div className="header__options">
-      <div className="header__option">
-        <Link className="header__option-text" to="/shop">
-          Shop
-        </Link>
-      </div>
-      <div className="header__option">
-        <Link className="header__option-text" to="/categories">
-          Categories
-        </Link>
-      </div>
-      <div className="header__option">
-        <Link className="header__option-text" to="/shop">
-          Contact
-        </Link>
-      </div>
-      <div className="header__option">
+  <HeaderContainer>
+    <LogoContainer to="/">
+      <LogoStyles>
+        <Logo title="logo"></Logo>
+      </LogoStyles>
+    </LogoContainer>
+    <OptionContainer>
+      <Option>
+        <OptionText to="/shop">Shop</OptionText>
+      </Option>
+      <Option>
+        <OptionText to="/categories">Categories</OptionText>
+      </Option>
+      <Option>
+        <OptionText to="/shop">Contact</OptionText>
+      </Option>
+      <Option>
         {currentUser ? (
-          <div onClick={() => auth.signOut()} className="header__option-text">
-            Sign out
-          </div>
+          <OptionText onClick={() => auth.signOut()}>Sign out</OptionText>
         ) : (
-          <Link className="header__option-text" to="/signin">
-            Sign in
-          </Link>
+          <OptionText to="/signin">Sign in</OptionText>
         )}
-      </div>
-      <div className="header__option-cart">
+      </Option>
+      <CartStyles>
         <Cart></Cart>
-      </div>
-    </div>
+      </CartStyles>
+    </OptionContainer>
     {!hidden ? <CartDropDown /> : null}
-  </div>
+  </HeaderContainer>
 );
 
 const mapStateToProps = state => ({

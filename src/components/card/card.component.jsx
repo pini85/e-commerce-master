@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { addItem } from "../../redux/cart/cart.action";
+import CustomButton from "../custom-button/custom-button.component";
+import { CardContainer, CardHoverLayer } from "./card.styles";
 import "./card.styles.scss";
 
 const Card = ({ item, addItem, isCategory, styleCard, styleLayer }) => {
@@ -25,31 +27,40 @@ const Card = ({ item, addItem, isCategory, styleCard, styleLayer }) => {
       );
     }
   };
+
+  const collectionCard = () => {
+    if (styleCard) {
+      return styleCard;
+    } else return "";
+  };
   return (
-    <Link
-      to={isCategory ? `./shop/${item.name.toLowerCase()}` : "#"}
-      className={isCategory ? "card-category" : "no-link"}
-    >
-      <div className={`card card-${item.index} ${styleCard}`}>
-        <div className={`card__layer ${styleLayer}`}></div>
-        <div className="card__img-container">
-          <div className="card__title">{item.name}</div>
-          <img src={"" + item.imageUrl} className="card__img" alt="" />
-          {!isCategory ? (
-            <div className="card__bottom">
-              {exclusive()}
-              <div className="card__price">{item.price}$</div>
-              {sale()}
-            </div>
-          ) : null}
-        </div>
-        {!isCategory ? (
-          <div onClick={() => addItem(item)} className="card__hover">
-            Add to cart
-          </div>
-        ) : null}
+    <div className={isCategory ? "container category-card " : "container"}>
+      <div className="image-container">
+        <img src={"" + item.imageUrl} className="image-class" alt="" />
       </div>
-    </Link>
+      <div className="down">
+        <h2 className="card-title">
+          <div className="title">{item.name}</div>
+        </h2>
+
+        <p className="card-des">
+          <div className="des">{item.des}</div>
+        </p>
+        <div className="exclusive">{item.exclusive ? "Exclusive" : ""}</div>
+        <div className="price-container">
+          {item.sale ? (
+            <span className="price">${item.discountedPrice}</span>
+          ) : (
+            ""
+          )}
+          <span className={item.sale ? "line-through" : "price"}>
+            ${item.price}
+          </span>
+        </div>
+      </div>
+
+      <CustomButton onClick={() => addItem(item)}>Add to cart</CustomButton>
+    </div>
   );
 };
 

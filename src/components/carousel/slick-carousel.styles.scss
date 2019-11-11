@@ -1,12 +1,12 @@
-.slick-carousel {
-  margin: 0 5rem;
-}
-
+//Override slick-carousel css//
 .slick-arrow {
   display: absolute !important;
   z-index: 1;
   color: transparent;
   font-size: 3rem;
+}
+.slick-next {
+  top: 28%;
 }
 
 .slick-prev:before,
@@ -14,6 +14,5 @@
   color: lightblue;
 }
 
-.test {
-  margin: 0 5rem;
+.slick-slide img {
 }

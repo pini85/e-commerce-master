@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import "./slick-carousel.styles.scss";
 import Card from "../card/card.component";
+import { SlickContainer } from "./slick-carousel.styles";
 
 class Carousel extends Component {
   render() {
@@ -15,13 +16,13 @@ class Carousel extends Component {
     };
 
     return (
-      <div className="slick-carousel">
+      <SlickContainer>
         <Slider {...settings}>
           {this.props.data.map(items => {
             return <Card key={items.id} item={items} />;
           })}
         </Slider>
-      </div>
+      </SlickContainer>
     );
   }
 }
