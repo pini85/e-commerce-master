@@ -13,6 +13,15 @@ const CartItem = ({ item, item: { imageUrl, name, price, quantity } }) => {
             Total price: {price * quantity}$
           </div>
         </div>
+        <div className="remove">
+          <div>Delete</div>
+          <div
+            // onClick={() => removeItemFromCart(item)}
+            className="remove-button"
+          >
+            &#10005;
+          </div>
+        </div>
         <span>
           <ArrowQuantity item={item} quantity={quantity} horizontal={true} />
         </span>

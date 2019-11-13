@@ -10,6 +10,14 @@
   margin-bottom: 3rem;
 }
 
+.all-card {
+  width: 33%;
+}
+
+.category-card {
+  width: 33%;
+}
+
 .image-container {
   background: #99c7d72e;
   height: 22rem;
@@ -58,6 +66,21 @@
   font-weight: 300;
   position: relative;
   bottom: -2px;
+}
+
+.category-name {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.image-category {
+  transition: all 0.3s;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
 }
 // .discount-price {
 //   text-decoration: line-through;

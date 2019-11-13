@@ -21,7 +21,9 @@ const Collections = ({ collections, match }) => {
             </div>
             <div className="show-more">
               <Link to={`${match.path}/${item.routeName}`}>
-                <h3 className="show-more__title">{`show more ${item.title}`}</h3>
+                <h3 className="show-more__title">
+                  {`show all ${item.title} `}
+                </h3>
               </Link>
             </div>
           </div>

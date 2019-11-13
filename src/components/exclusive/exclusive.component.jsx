@@ -11,7 +11,7 @@ const exclusive = ({ exclusive }) => {
         return items.map(item => {
           return (
             <>
-              <Card item={item} styleCard={"collection-card"} />
+              <Card item={item} isAll />
             </>
           );
         });

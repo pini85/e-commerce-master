@@ -11,6 +11,7 @@ class CollectionPage extends React.Component {
   componentDidMount() {
     window.scrollTo(0, 0);
   }
+
   render() {
     const { collection } = this.props;
     console.log(collection);
@@ -21,13 +22,7 @@ class CollectionPage extends React.Component {
         {collection.items.map(item => {
           return (
             <>
-              <Card
-                styleCard={"collection-card"}
-                styleLayer={"collection-card-layer"}
-                item={item}
-                key={item.id}
-              ></Card>
-              ;
+              <Card item={item} key={item.id} isAll></Card>;
             </>
           );
         })}

@@ -9,9 +9,14 @@
   top: 28%;
 }
 
+.slick-prev {
+  top: 28%;
+}
+
 .slick-prev:before,
 .slick-next:before {
   color: lightblue;
+  top: 28%;
 }
 
 .slick-slide img {

@@ -6,60 +6,79 @@ import CustomButton from "../custom-button/custom-button.component";
 import { CardContainer, CardHoverLayer } from "./card.styles";
 import "./card.styles.scss";
 
-const Card = ({ item, addItem, isCategory, styleCard, styleLayer }) => {
-  console.log(item);
+const Card = ({ item, addItem, isCategory, styleCard, isAll, styleLayer }) => {
+  // const exclusive = () => {
+  //   if (item.exclusive === true) {
+  //     return (
+  //       <div className="card__exclusive-container">
+  //         <div className="card__exclusive"> EXCLUSIVE </div>
+  //       </div>
+  //     );
+  //   }
+  // };
+  // const sale = () => {
+  //   if (item.sale === true) {
+  //     return (
+  //       <div className="card__sale-container">
+  //         <div className="card__sale"> {item.salePercentage}% OFF! </div>
+  //       </div>
+  //     );
+  //   }
+  // };
 
-  const exclusive = () => {
-    if (item.exclusive === true) {
-      return (
-        <div className="card__exclusive-container">
-          <div className="card__exclusive"> EXCLUSIVE </div>
-        </div>
-      );
+  // const collectionCard = () => {
+  //   if (styleCard) {
+  //     return styleCard;
+  //   } else return "";
+  // };
+  const cardType = () => {
+    if (isAll) {
+      return "container all-card";
+    } else if (isCategory) {
+      return "container category-card";
+    } else {
+      return "container";
     }
-  };
-  const sale = () => {
-    if (item.sale === true) {
-      return (
-        <div className="card__sale-container">
-          <div className="card__sale"> {item.salePercentage}% OFF! </div>
-        </div>
-      );
-    }
-  };
-
-  const collectionCard = () => {
-    if (styleCard) {
-      return styleCard;
-    } else return "";
   };
   return (
-    <div className={isCategory ? "container category-card " : "container"}>
-      <div className="image-container">
+    <div className={cardType()}>
+      <div
+        className={
+          isCategory ? "image-container image-category" : "image-container"
+        }
+      >
         <img src={"" + item.imageUrl} className="image-class" alt="" />
       </div>
-      <div className="down">
-        <h2 className="card-title">
-          <div className="title">{item.name}</div>
-        </h2>
+      {!isCategory ? (
+        <div className="down">
+          <div>
+            <h2 className="card-title">
+              <div className="title">{item.name}</div>
+            </h2>
+          </div>
 
-        <p className="card-des">
-          <div className="des">{item.des}</div>
-        </p>
-        <div className="exclusive">{item.exclusive ? "Exclusive" : ""}</div>
-        <div className="price-container">
-          {item.sale ? (
-            <span className="price">${item.discountedPrice}</span>
-          ) : (
-            ""
-          )}
-          <span className={item.sale ? "line-through" : "price"}>
-            ${item.price}
-          </span>
+          <p className="card-des">
+            <div className="des">{item.des}</div>
+          </p>
+          <div className="exclusive">{item.exclusive ? "Exclusive" : ""}</div>
+          <div className="price-container">
+            {item.sale ? (
+              <span className="price">${item.discountedPrice}</span>
+            ) : (
+              ""
+            )}
+            <span className={item.sale ? "line-through" : "price"}>
+              ${item.price}
+            </span>
+          </div>
         </div>
-      </div>
+      ) : (
+        <div className="category-name">{item.name}</div>
+      )}
 
-      <CustomButton onClick={() => addItem(item)}>Add to cart</CustomButton>
+      {!isCategory ? (
+        <CustomButton onClick={() => addItem(item)}>Add to cart</CustomButton>
+      ) : null}
     </div>
   );
 };
@@ -67,7 +86,4 @@ const Card = ({ item, addItem, isCategory, styleCard, styleLayer }) => {
 const mapStateToDispatch = dispatch => ({
   addItem: item => dispatch(addItem(item))
 });
-export default connect(
-  null,
-  mapStateToDispatch
-)(Card);
+export default connect(null, mapStateToDispatch)(Card);

@@ -11,7 +11,7 @@ const sale = ({ sale }) => {
         return items.map(item => {
           return (
             <>
-              <Card item={item} styleCard={"collection-card"} />
+              <Card item={item} isAll />
             </>
           );
         });
