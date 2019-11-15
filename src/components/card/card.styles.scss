@@ -30,6 +30,13 @@
   height: 20rem;
   width: 21rem;
   object-fit: contain;
+  @media only screen and (max-width: 37.5em) {
+    height: 21rem;
+    width: 12rem;
+  }
+  @media only screen and (max-width: 25em) {
+    width: 10rem;
+  }
 }
 
 .down {

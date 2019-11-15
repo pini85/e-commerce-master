@@ -1,4 +1,5 @@
 @import "./styles/my_normalize.css";
+@import "./styles/media-queries.scss";
 @import "./styles/base.styles.scss";
 @import "./styles/_typography.styles.scss";
 @import "./styles/animations.scss";

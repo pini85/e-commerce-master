@@ -32,9 +32,9 @@ const Header = ({ currentUser, hidden }) => (
       <Option>
         <OptionText to="/categories">Categories</OptionText>
       </Option>
-      <Option>
+      {/* <Option>
         <OptionText to="/shop">Contact</OptionText>
-      </Option>
+      </Option> */}
       <Option>
         {currentUser ? (
           <OptionText onClick={() => auth.signOut()}>Sign out</OptionText>

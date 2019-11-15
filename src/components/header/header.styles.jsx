@@ -8,6 +8,9 @@ export const HeaderContainer = styled.div`
   align-items: center;
   background-color: #4fa6d8;
   justify-content: space-between;
+  @media only screen and (max-width: 37.5em) {
+    height: 50px;
+  }
 `;
 
 export const LogoContainer = styled(Link)`

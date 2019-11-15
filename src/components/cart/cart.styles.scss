@@ -12,9 +12,12 @@
   border: 1px soid white;
   /* border: 1px solid white; */
   /* border-radius: 200px; */
-  top: -15px;
-  left: 14px;
+  top: -54%;
+  left: 48%;
   transform: rotate(27deg);
+  @media only screen and (max-width: 37.5em) {
+    top: -37%;
+  }
 }
 
 .icon-count-animate {
