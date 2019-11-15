@@ -12,7 +12,16 @@ class Carousel extends Component {
       speed: 500,
       slidesToShow: 4,
       slidesToScroll: 1,
-      arrows: true
+      arrows: true,
+      responsive: [
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
     };
 
     return (

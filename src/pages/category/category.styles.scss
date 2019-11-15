@@ -3,10 +3,19 @@
   margin-top: 10rem;
   text-align: center;
 }
+@media only screen and (max-width: 37.5em) {
+  .category-item__container {
+    display: flex;
+    flex-direction: column;
+  }
+}
 
 .category-card {
   width: 30%;
   padding: 3rem 5%;
+  @media only screen and (max-width: 37.5em) {
+    width: 100%;
+  }
 }
 
 .category-card-layer {

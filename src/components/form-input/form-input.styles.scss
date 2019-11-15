@@ -21,6 +21,9 @@
     border-radius: 0;
     border-bottom: 2px solid var(--color-primary);
     margin: 25px 0;
+    @media only screen and (max-width: 37.5em) {
+      padding: 3px 10px 10px 5px;
+    }
 
     &:focus {
       outline: none;

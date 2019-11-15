@@ -9,7 +9,7 @@ export const HeaderContainer = styled.div`
   background-color: #4fa6d8;
   justify-content: space-between;
   @media only screen and (max-width: 37.5em) {
-    height: 50px;
+    height: 60px;
   }
 `;
 
@@ -42,6 +42,9 @@ export const Option = styled.div`
     transform: scale(0);
     transform-origin: left;
     transition: all 0.5s ease;
+    @media only screen and (max-width: 37.5em) {
+      top: -3px;
+    }
   }
   &:after {
     content: "";
@@ -54,6 +57,9 @@ export const Option = styled.div`
     transform: scale(0);
     transform-origin: right;
     transition: all 0.5s ease;
+    @media only screen and (max-width: 37.5em) {
+      top: 21px;
+    }
   }
   &:hover:before,
   &:hover:after {

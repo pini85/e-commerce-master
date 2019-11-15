@@ -24,4 +24,7 @@
 
 button {
   margin-left: auto;
+  @media only screen and (max-width: 37.5em) {
+    margin-left: 0;
+  }
 }

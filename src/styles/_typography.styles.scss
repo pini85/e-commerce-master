@@ -9,6 +9,11 @@
   margin-top: 3rem;
   margin-bottom: 1.5rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .heading-secondary {
+    font-size: 2.5rem;
+  }
+}
 
 .heading-teritary {
   font-size: 2.5rem;
