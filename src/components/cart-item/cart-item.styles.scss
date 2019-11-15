@@ -9,11 +9,8 @@
     left: 8%;
     height: 1px;
     width: 80%;
-    transform: translatey(70px);
+    transform: translatey(-1rem);
     background-color: rgba(0, 0, 0, 0.2);
-    @media only screen and (max-width: 37.5em) {
-      transform: translatey(50px);
-    }
   }
 
   &__img {

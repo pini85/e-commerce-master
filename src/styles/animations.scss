@@ -18,6 +18,9 @@
   100% {
     color: var(--color-primary);
     transform: rotate(0deg) translate(-39px, 73px);
+    @media only screen and (max-width: 37.5em) {
+      transform: rotate(0deg) translate(-24px, 69px);
+    }
   }
 }
 

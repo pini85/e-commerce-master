@@ -3,7 +3,7 @@
     content: "";
     position: absolute;
     height: 1px;
-    width: 500px;
+    width: 100%;
     background-color: lightgray;
     top: 152px;
     left: 0;
@@ -14,19 +14,15 @@
     width: 50rem;
     display: flex;
     position: relative;
-    margin: 0 auto;
+
     &::after {
       content: "";
       position: absolute;
       height: 1px;
-      width: 500px;
+      width: 100%;
       background-color: lightgray;
-      top: -8px;
+      top: -0.5rem;
       left: 0;
-      @media only screen and (max-width: 37.5em) {
-        width: 700px;
-        left: -100px;
-      }
     }
   }
 
@@ -40,6 +36,10 @@
 
   &__image {
     margin: 0 4rem;
+    @media only screen and (max-width: 37.5em) {
+      height: 11rem;
+      width: 11rem;
+    }
   }
 
   &__title {
@@ -95,4 +95,8 @@
 
 .arrow {
   color: var(--color-text-dark);
+}
+.card__img {
+  height: 11rem;
+  width: 11rem;
 }
