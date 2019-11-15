@@ -5,6 +5,9 @@ export const HorizontalContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin-right: 2rem;
+  @media only screen and (max-width: 37.5em) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const HorizontalQuantity = styled.div`
