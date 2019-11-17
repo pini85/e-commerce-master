@@ -4,7 +4,7 @@ import ArrowQuantity from "../arrow-quantity/arrow-quantity.components";
 
 const CartItem = ({ item, item: { imageUrl, name, price, quantity } }) => {
   return (
-    <div>
+    <>
       <div className="cart-item">
         <img src={imageUrl} alt={name} className="cart-item__img" />
         <div className="cart-item__details">
@@ -13,8 +13,11 @@ const CartItem = ({ item, item: { imageUrl, name, price, quantity } }) => {
             Total price: {price * quantity}$
           </div>
         </div>
-        <div className="remove">
-          <div>Delete</div>
+        <div className="remove-arrow-container">
+          <div className="remove"></div>
+          <span>
+            <ArrowQuantity item={item} quantity={quantity} horizontal={true} />
+          </span>
           <div
             // onClick={() => removeItemFromCart(item)}
             className="remove-button"
@@ -22,11 +25,8 @@ const CartItem = ({ item, item: { imageUrl, name, price, quantity } }) => {
             &#10005;
           </div>
         </div>
-        <span>
-          <ArrowQuantity item={item} quantity={quantity} horizontal={true} />
-        </span>
       </div>
-    </div>
+    </>
   );
 };
 

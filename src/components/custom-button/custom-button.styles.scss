@@ -25,6 +25,9 @@
     transition: transform 500ms ease;
   }
 
+  @media only screen and (max-width: 37.5em) {
+  }
+
   & span {
     position: relative;
     z-index: 2;

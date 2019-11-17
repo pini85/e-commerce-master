@@ -17,13 +17,22 @@
 
   100% {
     color: var(--color-primary);
-    transform: rotate(0deg) translate(-39px, 73px);
-    @media only screen and (max-width: 37.5em) {
-      transform: rotate(0deg) translate(-24px, 69px);
+    transform: rotate(0deg) translate(-36px, 59px);
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  @keyframes drop {
+    0% {
+      color: inherit;
+      transform: rotate(27deg) translate(0px);
+    }
+
+    100% {
+      color: var(--color-primary);
+      transform: rotate(0deg) translate(-29px, 71px);
     }
   }
 }
-
 @keyframes slide-to-right {
   from {
     transform: translatex(-150px);
