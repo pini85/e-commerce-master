@@ -1,8 +1,14 @@
 import React from "react";
+import { connect } from "react-redux";
+import { removeItem } from "../../redux/cart/cart.action";
 import "./cart-item.styles.scss";
 import ArrowQuantity from "../arrow-quantity/arrow-quantity.components";
 
-const CartItem = ({ item, item: { imageUrl, name, price, quantity } }) => {
+const CartItem = ({
+  item,
+  removeItemFromCart,
+  item: { imageUrl, name, price, quantity }
+}) => {
   return (
     <>
       <div className="cart-item">
@@ -19,7 +25,7 @@ const CartItem = ({ item, item: { imageUrl, name, price, quantity } }) => {
             <ArrowQuantity item={item} quantity={quantity} horizontal={true} />
           </span>
           <div
-            // onClick={() => removeItemFromCart(item)}
+            onClick={() => removeItemFromCart(item)}
             className="remove-button"
           >
             &#10005;
@@ -30,4 +36,8 @@ const CartItem = ({ item, item: { imageUrl, name, price, quantity } }) => {
   );
 };
 
-export default CartItem;
+const mapStateToDispatch = dispatch => ({
+  removeItemFromCart: item => dispatch(removeItem(item))
+});
+
+export default connect(null, mapStateToDispatch)(CartItem);
