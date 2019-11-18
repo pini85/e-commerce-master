@@ -18,7 +18,6 @@ const Cart = ({ toggleCartHidden, hidden, quantity }) => {
     </div>
   );
 };
-
 const mapStateToProps = state => ({
   hidden: selectCartHidden(state),
   quantity: selectCartItemsCount(state)
