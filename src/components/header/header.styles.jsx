@@ -51,7 +51,7 @@ export const Option = styled.div`
     width: 100%;
     height: 2px;
     position: absolute;
-    top: 26px;
+    top: 2.7rem;
     left: 0;
     background-color: white;
     transform: scale(0);

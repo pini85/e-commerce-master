@@ -17,7 +17,33 @@
 
   100% {
     color: var(--color-primary);
-    transform: rotate(0deg) translate(-36px, 59px);
+    transform: rotate(0deg) translate(-36px, 7.6rem);
+  }
+}
+@media only screen and (max-width: 1030px) and (max-height: 610px) {
+  @keyframes drop {
+    0% {
+      color: inherit;
+      transform: rotate(27deg) translate(0px);
+    }
+
+    100% {
+      color: var(--color-primary);
+      transform: rotate(0deg) translate(-36px, 8rem);
+    }
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  @keyframes drop {
+    0% {
+      color: inherit;
+      transform: rotate(27deg) translate(0px);
+    }
+
+    100% {
+      color: var(--color-primary);
+      transform: rotate(0deg) translate(-36px, 8.7rem);
+    }
   }
 }
 @media only screen and (max-width: 37.5em) {
