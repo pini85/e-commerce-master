@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { removeItem } from "../../redux/cart/cart.action";
+import { removeItemFromCart } from "../../redux/cart/cart.action";
 import "./cart-item.styles.scss";
 import ArrowQuantity from "../arrow-quantity/arrow-quantity.components";
 
@@ -37,7 +37,7 @@ const CartItem = ({
 };
 
 const mapStateToDispatch = dispatch => ({
-  removeItemFromCart: item => dispatch(removeItem(item))
+  removeItemFromCart: item => dispatch(removeItemFromCart(item))
 });
 
 export default connect(null, mapStateToDispatch)(CartItem);
