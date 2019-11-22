@@ -1,6 +1,7 @@
 .icon-container {
   position: relative;
   height: 3rem;
+  transition: all 0.2s;
 }
 
 .icon-count {
@@ -14,6 +15,7 @@
   /* border-radius: 200px; */
   top: -54%;
   left: 48%;
+  transition: all 0.2s;
   transform: rotate(27deg);
   @media only screen and (max-width: 37.5em) {
     font-size: 1.8rem;
@@ -28,4 +30,12 @@
   animation-duration: 0.5s;
   animation-timing-function: ease-in;
   animation-fill-mode: forwards;
+}
+
+.animate {
+  transform: scale(1.3);
+}
+
+.icon-count-animate-notice {
+  color: yellow;
 }

@@ -8,16 +8,47 @@ import {
 } from "../../redux/cart/cart.selectors";
 import icon from "../../assets/svg/cart.svg";
 
-const Cart = ({ toggleCartHidden, hidden, quantity }) => {
-  return (
-    <div onClick={toggleCartHidden} className="icon-container">
-      <img className="icon-container" src={icon} alt="" />
-      <span className={`icon-count ${!hidden ? "icon-count-animate" : ""}`}>
-        {quantity}
-      </span>
-    </div>
-  );
-};
+class Cart extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      animation: false
+    };
+  }
+  componentDidUpdate(prevProps) {
+    if (this.props.quantity !== prevProps.quantity) {
+      this.setState({ animation: true });
+      setTimeout(() => {
+        this.setState({ animation: false });
+      }, 500);
+    }
+  }
+
+  render() {
+    console.log(this.state);
+
+    const { toggleCartHidden, hidden, quantity } = this.props;
+    const iconAnimation = () => {
+      if (!hidden) {
+        return "icon-count-animate";
+      } else if (this.state.animation) {
+        return "icon-count-animate-notice";
+      }
+      return "";
+    };
+    return (
+      <div
+        onClick={toggleCartHidden}
+        className={
+          this.state.animation ? "icon-container animate" : "icon-container"
+        }
+      >
+        <img className="icon-container" src={icon} alt="" />
+        <span className={`icon-count ${iconAnimation()}`}>{quantity}</span>
+      </div>
+    );
+  }
+}
 const mapStateToProps = state => ({
   hidden: selectCartHidden(state),
   quantity: selectCartItemsCount(state)
