@@ -22,5 +22,5 @@ export const removeItemFromCart = item => ({
 // export const addQuantity = (item, quantity) => ({
 //   type: CartActionTypes.ADD_QUANTITY,
 //   payload: item,
-//   quantity
+//   quantityfgh
 // });
