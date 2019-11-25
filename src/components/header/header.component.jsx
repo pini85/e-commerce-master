@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import FadeTransition from "../../transitions/fadeTransition";
 import {
   HeaderContainer,
   LogoContainer,
@@ -46,7 +46,10 @@ const Header = ({ currentUser, hidden }) => (
         <Cart></Cart>
       </CartStyles>
     </OptionContainer>
-    {!hidden ? <CartDropDown /> : null}
+
+    <FadeTransition isOpen={!hidden} duration={500}>
+      {!hidden ? <CartDropDown /> : null}
+    </FadeTransition>
   </HeaderContainer>
 );
 

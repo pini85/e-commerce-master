@@ -8,6 +8,16 @@
     transform: rotate(0);
   }
 }
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: rotate(0);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(-90deg);
+  }
+}
 
 @keyframes drop {
   0% {
