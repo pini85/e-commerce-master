@@ -25,8 +25,6 @@ class Cart extends React.Component {
   }
 
   render() {
-    console.log(this.state);
-
     const { toggleCartHidden, hidden, quantity } = this.props;
     const iconAnimation = () => {
       if (!hidden) {

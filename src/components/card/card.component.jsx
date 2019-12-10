@@ -1,9 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { addItem } from "../../redux/cart/cart.action";
 import CustomButton from "../custom-button/custom-button.component";
-import { CardContainer, CardHoverLayer } from "./card.styles";
 import "./card.styles.scss";
 
 const Card = ({ item, addItem, isCategory, styleCard, isAll, styleLayer }) => {

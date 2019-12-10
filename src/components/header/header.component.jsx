@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import FadeTransition from "../../transitions/fadeTransition";
+import { CSSTransition } from "react-transition-group";
 import {
   HeaderContainer,
   LogoContainer,
@@ -47,9 +47,7 @@ const Header = ({ currentUser, hidden }) => (
       </CartStyles>
     </OptionContainer>
 
-    <FadeTransition isOpen={!hidden} duration={500}>
-      {!hidden ? <CartDropDown /> : null}
-    </FadeTransition>
+    {!hidden ? <CartDropDown /> : null}
   </HeaderContainer>
 );
 

@@ -16,6 +16,15 @@
   // animation-timing-function: ease-out;
   // animation-fill-mode: forwards;
   overflow: hidden;
+  transition: all 3s;
+}
+
+.hello {
+  animation-name: fadeIn;
+  transform-origin: top right;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
 }
 
 .cart-dropdown-button {
@@ -41,4 +50,16 @@
 .cart-items-empty-message {
   font-size: 1.5rem;
   margin-top: 19rem;
+}
+
+.shift-enter {
+  background-color: white;
+  transform: translate3d(-100%, 0, 0);
+}
+
+.shift-enter-active,
+.shift-enter-done,
+.shift-exit {
+  background-color: purple;
+  transform: translate3d(0, 0, 0);
 }

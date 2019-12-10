@@ -21,7 +21,7 @@ export const selectCategory = createSelector([selectShop], shop =>
     const title = item.title;
     const routeName = item.routeName;
     firstItem.map(item => {
-      array.push({
+      return array.push({
         name: title,
         imageUrl: item.imageUrl,
         routeName

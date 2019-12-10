@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-const cate = () => {};
-
 export const CardContainer = styled.div`
   position: relative;
   perspective: 150rem;

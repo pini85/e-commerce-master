@@ -1,6 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import "./cart-dropdown.styles.scss";
+import { Transition } from "react-transition-group";
+import { CSSTransition } from "react-transition-group";
 import CartItem from "../cart-item/cart-item.component";
 import CustomButton from "../custom-button/custom-button.component";
 import { selectCartItems } from "../../redux/cart/cart.selectors";
@@ -9,34 +11,41 @@ import { selectCartHidden } from "../../redux/cart/cart.selectors";
 import { withRouter } from "react-router-dom";
 
 class CartDropDown extends React.Component {
+  state = { animation: false };
+
   render() {
     return (
-      <div className="cart-dropdown">
-        ><div className="cart-total">Total items:</div>
-        <div className="cart-items">
-          {this.props.cartItems.length ? (
-            this.props.cartItems.map(cartItem => (
-              <CartItem key={cartItem.key} item={cartItem} />
-            ))
-          ) : (
-            <div className="cart-items-empty-message">
-              Please add items to your shopping cart
-            </div>
-          )}
-        </div>
-        {this.props.cartItems.length ? (
-          <div className="cart-dropdown-button">
-            <CustomButton
-              onClick={() => {
-                this.props.history.push("/checkout");
-                this.props.hideCart();
-              }}
-            >
-              Proceed to checkout
-            </CustomButton>
+      <>
+        <div className={`cart-dropdown ${this.state.animation ? "hello" : ""}`}>
+          ><div className="cart-total">Total items:</div>
+          <div className="cart-items">
+            {this.props.cartItems.length ? (
+              this.props.cartItems.map(cartItem => (
+                <CartItem key={cartItem.id} item={cartItem} />
+              ))
+            ) : (
+              <div className="cart-items-empty-message">
+                Please add items to your shopping cart
+              </div>
+            )}
           </div>
-        ) : null}
-      </div>
+          {this.props.cartItems.length ? (
+            <div className="cart-dropdown-button">
+              <CustomButton
+                onClick={() => {
+                  this.props.history.push("/checkout");
+
+                  this.setState({ animation: true });
+                }}
+                onAnimationEnd={() => this.setState({ animation: false })}
+                onAnimationEnd={() => this.props.hideCart()}
+              >
+                Proceed to checkout
+              </CustomButton>
+            </div>
+          ) : null}
+        </div>
+      </>
     );
   }
 }
