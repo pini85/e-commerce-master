@@ -11,12 +11,10 @@ import { selectCartHidden } from "../../redux/cart/cart.selectors";
 import { withRouter } from "react-router-dom";
 
 class CartDropDown extends React.Component {
-  state = { animation: false };
-
   render() {
     return (
       <>
-        <div className={`cart-dropdown ${this.state.animation ? "hello" : ""}`}>
+        <div className="cart-dropdown">
           ><div className="cart-total">Total items:</div>
           <div className="cart-items">
             {this.props.cartItems.length ? (
@@ -34,11 +32,8 @@ class CartDropDown extends React.Component {
               <CustomButton
                 onClick={() => {
                   this.props.history.push("/checkout");
-
-                  this.setState({ animation: true });
+                  this.props.hideCart();
                 }}
-                onAnimationEnd={() => this.setState({ animation: false })}
-                onAnimationEnd={() => this.props.hideCart()}
               >
                 Proceed to checkout
               </CustomButton>

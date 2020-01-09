@@ -2,7 +2,7 @@ import SHOP_DATA from "./shop.data";
 
 export const saleData = SHOP_DATA.map(item => {
   return item.items.filter(item => {
-    if (item.sale === true) {
+    if (item.sale) {
       return item;
     }
   });
@@ -21,11 +21,11 @@ export const saleData = SHOP_DATA.map(item => {
 // };
 
 export const exclusiveData = SHOP_DATA.map(item => {
-  return item.items;
-}).filter(item => {
-  if (item.exclusive === true) {
-    return item;
-  }
+  return item.items.filter(item => {
+    if (item.exclusive) {
+      return item;
+    }
+  });
 });
 
 // export const exclusiveData = () => {

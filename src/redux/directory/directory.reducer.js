@@ -12,12 +12,7 @@ const INITIAL_STATE = {
       id: 2,
       linkUrl: "exclusive"
     },
-    {
-      title: "popular",
-      image: "",
-      id: 3,
-      linkUrl: "popular"
-    },
+
     {
       title: "Mens",
       image: "",

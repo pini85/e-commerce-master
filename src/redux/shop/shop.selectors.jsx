@@ -46,6 +46,8 @@ export const selectSaleCollection = createSelector([selectShop], shop => {
 
 export const selectExclusiveCollection = createSelector([selectShop], shop => {
   return shop.exclusive.map(items => {
+    console.log(items);
+
     return items;
   });
 });
